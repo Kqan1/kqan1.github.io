@@ -9,12 +9,7 @@
 		"start": "next start",
 		"getready": "del-cli --force ./.next && next build && next start",
 		"clearcache": "del-cli --force ./.next",
-		"lint": "next lint",
-		"migrate": "npx prisma migrate dev",
-		"generate": "npx prisma generate",
-		"seed": "npx prisma db seed",
-		"studio": "npx prisma studio",
-		"postinstall": "prisma generate"
+		"lint": "next lint"
 	},
 	"dependencies": {
 		"react": "^18",
