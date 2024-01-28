@@ -1,11 +1,11 @@
-import { Open_Sans, Noto_Serif } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 
-const openSans = Open_Sans({
+const inter = Inter({
     subsets: ["latin"] 
 });
 
-const notoSerif = Noto_Serif({ 
-    subsets: ["latin"] 
+const playfairDisplay = Playfair_Display({ 
+    subsets: ["latin"]
 });
 
-export { openSans, notoSerif };
+export { inter, playfairDisplay };
