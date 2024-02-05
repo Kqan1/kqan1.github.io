@@ -5,7 +5,6 @@ import { useState, useEffect, useRef } from "react";
 
 export default function ScrollBar() {
 	const [percentage, setPercentage] = useState<number>(0);
-    const [goUpState, setGoUpState] = useState<boolean>(false);
     const percentageRef = useRef<HTMLDivElement>(null);
 
     const getPercentage = (number1: number, number2: number) => {
@@ -29,12 +28,12 @@ export default function ScrollBar() {
 			height: `${percentage}%`,
 			duration: 0.1,
 		});
-    }, { dependencies: [percentage, goUpState], revertOnUpdate: false });
+    }, { dependencies: [percentage] });
 
 	return (		
-		<div className="bg-zinc-300/70 w-3 h-full rounded-md overflow-hidden mt-3">
+		<div className="w-3 h-full rounded-md overflow-hidden mt-3 z-50 border-zinc-800 border">
 			<div
-				className="bg-zinc-700 rounded-md"
+				className="bg-zinc-800 rounded-md"
 				ref={percentageRef}
 			></div>
 		</div>

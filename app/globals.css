@@ -1,33 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-html.lenis {
-	height: auto;
-}
-
-.lenis.lenis-smooth {
-	scroll-behavior: auto !important;
-}
-
-.lenis.lenis-smooth [data-lenis-prevent] {
-	overscroll-behavior: contain;
-}
-
-.lenis.lenis-stopped {
-	overflow: hidden;
-}
-
-.lenis.lenis-scrolling iframe {
-	pointer-events: none;
-}
-
-:is(:root, html, body)::-webkit-scrollbar {
-	display: none;
-}
-
-:is(:root, html, body) {
-	-ms-overflow-style: none;
-    scrollbar-width: none;
-	overflow: -moz-scrollbars-none;
-}

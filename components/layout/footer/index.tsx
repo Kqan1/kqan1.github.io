@@ -1,7 +1,7 @@
 export default function RootFooter() {
     return (
-        <div>
-            RootFooter
-        </div>
+        <footer className="flex items-center justify-center py-4">
+            Footer
+        </footer>
     );
 };
