@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { inter } from "@/utils/fonts"
+import { lato } from "@/utils/fonts"
 import Providers from "@/app/providers";
 import Footer from "@/components/layout/footer";
-import Layout from "@/components/layout/layout";
+import Overlay from "@/components/layout/overlay";
 
 export const metadata: Metadata = {
 	title: "Kqan_ - FullStack Web Developer",
@@ -24,10 +24,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en-EN" className="min-h-screen h-full light">
-			<body className={`${inter.className} relative text-gray-800 dark:text-gray-200 antialiased bg-neutral-50 dark:bg-black overflow-x-hidden h-full`}>
+			<body className={`${lato.className} relative text-gray-800 dark:text-gray-200 antialiased bg-neutral-50 dark:bg-black overflow-x-hidden h-full`}>
 				<Providers>
 					<main className="relative flex flex-col min-h-screen">
-						<Layout />
+						<Overlay />
 						<div className="relative flex-grow flex-1 h-full px-12">
                             {children}
                         </div>

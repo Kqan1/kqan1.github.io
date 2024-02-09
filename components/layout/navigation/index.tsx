@@ -84,8 +84,8 @@ export default function Navigation() {
 						id="link-box"
 					>
 						<Link href="#" className="text-7xl font-bold relative hover:text-white before:-z-10 before:transition-transform before:origin-bottom hover:before:scale-y-100 before:scale-y-0 before:content-[''] before:bg-black before:absolute before:w-full before:h-full">Home</Link>
-						<Link href="#" className="text-7xl font-bold relative hover:text-white before:-z-10 before:transition-transform before:origin-bottom hover:before:scale-y-100 before:scale-y-0 before:content-[''] before:bg-black before:absolute before:w-full before:h-full">test1</Link>
-						<Link href="#" className="text-7xl font-bold relative hover:text-white before:-z-10 before:transition-transform before:origin-bottom hover:before:scale-y-100 before:scale-y-0 before:content-[''] before:bg-black before:absolute before:w-full before:h-full">test2</Link>
+						<Link href="#about" className="text-7xl font-bold relative hover:text-white before:-z-10 before:transition-transform before:origin-bottom hover:before:scale-y-100 before:scale-y-0 before:content-[''] before:bg-black before:absolute before:w-full before:h-full">AboutMe</Link>
+						<Link href="#tools" className="text-7xl font-bold relative hover:text-white before:-z-10 before:transition-transform before:origin-bottom hover:before:scale-y-100 before:scale-y-0 before:content-[''] before:bg-black before:absolute before:w-full before:h-full">Tools</Link>
 						<Link href="#" className="text-7xl font-bold relative hover:text-white before:-z-10 before:transition-transform before:origin-bottom hover:before:scale-y-100 before:scale-y-0 before:content-[''] before:bg-black before:absolute before:w-full before:h-full">test3</Link>
 					</div>
 					

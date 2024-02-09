@@ -1,11 +1,12 @@
-import { Inter, Playfair_Display } from "next/font/google";
+import { Lato, Playfair_Display } from "next/font/google";
 
-const inter = Inter({
-    subsets: ["latin"] 
+const lato = Lato({
+    subsets: ["latin"],
+    weight: ["400"] 
 });
 
 const playfairDisplay = Playfair_Display({ 
     subsets: ["latin"]
 });
 
-export { inter, playfairDisplay };
+export { lato, playfairDisplay };

@@ -21,8 +21,8 @@ export default function Hero() {
 				setText("FreeLancer");
 				await delay(7500);
 				setText("FullStack Web Developer");
-			}
-		}
+			};
+		};
 		test();
 	}, []);
 
@@ -36,9 +36,9 @@ export default function Hero() {
 
 	return (
 		<section className="h-screen flex flex-col items-center gap-8 relative">
-			<div className="h-[40%] flex flex-col justify-end">
-				<h1 className={`${playfairDisplay.className} text-6xl`}>Kaan Eşki</h1>
-				<p className="text-center" ref={textRef}>{text}</p>
+			<div className="h-[40%] flex flex-col justify-end space-y-4">
+				<h1 className={`${playfairDisplay.className} text-8xl`}>Kqan_</h1>
+				<p className="text-center text-xl" ref={textRef}>{text}</p>
 			</div>
 			<div className="flex gap-4 h-2/3">
 				<Button variant="outline">Contant Me</Button>
