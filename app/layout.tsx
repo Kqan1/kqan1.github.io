@@ -23,12 +23,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
-		<html lang="en-EN" className="min-h-screen h-full light">
-			<body className={`${lato.className} relative text-gray-800 dark:text-gray-200 antialiased bg-neutral-50 dark:bg-black overflow-x-hidden h-full`}>
+		<html lang="en-EN" className="min-h-screen w-screen h-full light">
+			<body className={`${lato.className} h-full w-screen relative text-gray-800 dark:text-gray-200 antialiased bg-neutral-50 dark:bg-black overflow-x-hidden`}>
 				<Providers>
 					<main className="relative flex flex-col min-h-screen">
 						<Overlay />
-						<div className="relative flex-grow flex-1 h-full px-12">
+						<div className="relative flex-grow flex-1 h-full">
                             {children}
                         </div>
 						<Footer />

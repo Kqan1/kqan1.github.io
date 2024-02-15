@@ -31,9 +31,9 @@ export default function ScrollBar() {
     }, { dependencies: [percentage] });
 
 	return (		
-		<div className="w-3 h-full rounded-md overflow-hidden mt-3 z-50 border-zinc-800 border">
+		<div className="lg:w-3 w-1 fixed lg:static inset-y-0 right-0 h-full lg:rounded-md lg:mt-3 z-50 border-zinc-800 lg:border">
 			<div
-				className="bg-zinc-800 rounded-md"
+				className="bg-zinc-800 lg:rounded-md"
 				ref={percentageRef}
 			></div>
 		</div>

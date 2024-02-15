@@ -16,21 +16,21 @@ export default function TechStack() {
 			scrollTrigger: {
 				trigger: startRef.current,
 				start: "-15% center",
-			},
+			}
 		});
 		tl.from("#category-wrapper > h3", {
 			y: -30,
 			opacity: 0,
-			stagger: .075,
+			stagger: .075
 		}).from("#category-wrapper>#logo-wrapper>svg", {
 			stagger: .05,
 			opacity: 0,
-			y: -50,
+			y: -50
 		})
 	}, { dependencies: [] });
 
 	return (
-		<section className="h-screen flex flex-col items-center space-y-16 px-36" ref={startRef} id="tools">
+		<section className="h-screen flex flex-col justify-center items-center space-y-16 px-36" ref={startRef} id="tools">
 			<h2 className={`${playfairDisplay.className} text-5xl font-semibold`}>TOOLS I&apos;M USING.</h2>
 			<div className="w-2/3 space-y-6" id="category-wrapper">
 				<h3 className="text-3xl font-medium">Design</h3>

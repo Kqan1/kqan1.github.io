@@ -16,8 +16,8 @@ export default function Navigation() {
 	const router = useRouter()
 
 	useGSAP(() => {
-		tl.from(navRef.current, {
-			xPercent: 100,
+		tl.to(navRef.current, {
+			xPercent: -100,
 			duration: .6,
 			ease: "power1.inOut",
 		}).from("#image", {
@@ -57,7 +57,7 @@ export default function Navigation() {
 				<div className="bg-zinc-800 h-1 relative transition-all duration-[0.25s] w-full rounded-full before:top-2 after:bottom-2 before:bg-zinc-800 before:content-[''] before:h-1 before:absolute before:transition-all before:duration-[0.25s] before:w-full before:rounded-full before:left-0 after:bg-zinc-800 after:content-[''] after:h-1 after:absolute after:transition-all after:duration-[0.25s] after:w-full after:rounded-full after:left-0"></div>
 			</button>
 			<div
-				className="fixed inset-0 bg-zinc-300 z-40 flex justify-between"
+				className="fixed inset-0 bg-zinc-300 z-40 flex justify-between translate-x-full"
 				ref={navRef}
 			>
 				<div className="">
@@ -68,7 +68,7 @@ export default function Navigation() {
 					id="image"
 				>
 					<Image 
-						src="https://picsum.photos/1000/400"
+						src="https://picsum.photos/1920/1080"
 						alt=""
 						fill
 					/>
@@ -86,7 +86,6 @@ export default function Navigation() {
 						<Link href="#" className="text-7xl font-bold relative hover:text-white before:-z-10 before:transition-transform before:origin-bottom hover:before:scale-y-100 before:scale-y-0 before:content-[''] before:bg-black before:absolute before:w-full before:h-full">Home</Link>
 						<Link href="#about" className="text-7xl font-bold relative hover:text-white before:-z-10 before:transition-transform before:origin-bottom hover:before:scale-y-100 before:scale-y-0 before:content-[''] before:bg-black before:absolute before:w-full before:h-full">AboutMe</Link>
 						<Link href="#tools" className="text-7xl font-bold relative hover:text-white before:-z-10 before:transition-transform before:origin-bottom hover:before:scale-y-100 before:scale-y-0 before:content-[''] before:bg-black before:absolute before:w-full before:h-full">Tools</Link>
-						<Link href="#" className="text-7xl font-bold relative hover:text-white before:-z-10 before:transition-transform before:origin-bottom hover:before:scale-y-100 before:scale-y-0 before:content-[''] before:bg-black before:absolute before:w-full before:h-full">test3</Link>
 					</div>
 					
 					<div className="flex space-x-4" id="accounts">
