@@ -9,7 +9,7 @@ export default function Hero() {
 	const [text, setText] = useState<"FullStack Web Developer"|"UI/UX Designer"|"FreeLancer">("FullStack Web Developer");
 	const textRef = useRef<HTMLParagraphElement>(null);
 
-	const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+	const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
 	useEffect(() => {
 		async function changeText() {
@@ -26,7 +26,7 @@ export default function Hero() {
 	}, []);
 
 	useGSAP(() => {
-		gsap.from(textRef, {
+		gsap.from(textRef.current, {
 			opacity: 0,
 			duration: 0.75,
 			y: 30
@@ -36,7 +36,7 @@ export default function Hero() {
 	return (
 		<section className="h-screen flex flex-col items-center gap-8 relative">
 			<div className="h-2/5 flex flex-col justify-end space-y-4">
-				<h1 className={`${playfairDisplay.className} text-8xl`}>Kqan_</h1>
+				<h1 className={`${playfairDisplay.className} text-9xl`}>Kqan_</h1>
 				<p className="text-center text-xl" ref={textRef}>{text}</p>
 			</div>
 			<div className="absolute bottom-4 w-full px-12 flex justify-center items-center gap-4">

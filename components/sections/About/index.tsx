@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
+import { SiGreensock, SiNextdotjs, SiPrisma, SiReact, SiTailwindcss, SiTypescript } from "react-icons/si";
 import SplitType from "split-type";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -23,7 +24,7 @@ export default function About() {
         }
     }, []);
 
-    const isMobile = width <= 768;
+    const isMobile = width <= 1024;
 
 	useGSAP(() => {
 		SplitType.create("#sect-1", { types: "chars" });
@@ -31,7 +32,7 @@ export default function About() {
 			scrollTrigger: {
 				trigger: "#about",
 				scrub: true,
-				pin: true,
+				pin: !isMobile,
 				end: () => "+=" + sectionRef?.current?.offsetWidth
 			},
 		});
@@ -48,23 +49,34 @@ export default function About() {
 			opacity: .2,
 			stagger: .1
 		});
-	}, { dependencies: [] });
+	}, { dependencies: [isMobile] });
 
 	return (
 		<section className="w-[200vw] lg:px-20 px-6" id="about" ref={sectionRef}>
 			<div className="w-full h-screen grid place-items-center" id="sect-1">
 				<h2 className="text-[17rem] font-bold whitespace-nowrap">
-					Lorem ipsum dolor sit amet.
+					A STORY WORTH TELLING
 				</h2>
 			</div>
-			<div className="w-screen h-screen flex justify-center" id="sect-2">
-				<div className="lg:w-5/6 w-full grid grid-rows-6">
-					<h2 className={`${playfairDisplay.className} font-medium text-7xl`}>Lorem ipsum dolor sit amet.</h2>
-					<p className="text-3xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea delectus a commodi quasi corporis, qui amet voluptate consectetur, voluptates, dolor sequi tenetur illum nostrum quod?</p>
-					<p className="text-3xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea delectus a commodi quasi corporis, qui amet voluptate consectetur, voluptates, dolor sequi tenetur illum nostrum quod?</p>
-					<p className="text-3xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea delectus a commodi quasi corporis, qui amet voluptate consectetur, voluptates, dolor sequi tenetur illum nostrum quod?</p>
+			<div className="w-[calc(100vw-10rem)] h-screen px-20" id="sect-2">
+				<div className="w-5/6 space-y-8">
+					<h2 className={`${playfairDisplay.className} font-medium text-7xl mb-20`}>
+						HIGH SCHOOL FULL-STACK WEB DEVELOPER 
+					</h2>
+					<p className="text-2xl">
+						As a 10th grade full-stack web developer, I have been immersed in the world of software development for 3 years now. I am well-versed in modern technologies such as 
+						<span className="flex items-center">
+							<span className="flex items-center gap-1"><SiNextdotjs />Next.js,&nbsp;</span>
+							<span className="flex items-center gap-1"><SiReact />React.js,&nbsp;</span>
+							<span className="flex items-center gap-1"><SiTypescript />TypeScript,&nbsp;</span>
+							<span className="flex items-center gap-1"><SiTailwindcss />Tailwindcss,&nbsp;</span>
+							<span className="flex items-center gap-1"><SiPrisma />Prisma and &nbsp;</span>
+							<span className="flex items-center gap-1"><SiGreensock />GSAP</span>.
+						</span> 
+						My proficiency in these cutting-edge tools allows me to create dynamic and visually stunning web applications.
+					</p>
 				</div>
 			</div>
 		</section>
 	);
-};
+}

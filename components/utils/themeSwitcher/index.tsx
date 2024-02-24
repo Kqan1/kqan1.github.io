@@ -31,4 +31,4 @@ export default function ThemeSwitcher() {
             <Laptop2 onClick={()=>setCurrentTheme("system")} />
         </div>
 	);
-};
+}

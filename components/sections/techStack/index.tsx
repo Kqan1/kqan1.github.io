@@ -4,10 +4,9 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
-import { SiAdobeillustrator, SiAdobexd, SiBootstrap, SiCanva, SiFigma, SiGit, SiGithub, SiGreensock, SiJavascript, SiMysql, SiNextdotjs, SiPhp, SiPostgresql, SiPostman, SiPrisma, SiReact, SiTailwindcss, SiTypescript, SiVisualstudiocode } from "react-icons/si";
+import { SiAdobeillustrator, SiAdobexd, SiBootstrap, SiCanva, SiFigma, SiGit, SiGithub, SiGreensock, SiJavascript, SiMysql, SiNextdotjs, SiPhp, SiPostman, SiPrisma, SiReact, SiTailwindcss, SiTypescript, SiVisualstudiocode } from "react-icons/si";
 
 gsap.registerPlugin(ScrollTrigger);
-
 export default function TechStack() {
 	const startRef = useRef(null);
 
@@ -60,7 +59,6 @@ export default function TechStack() {
 					<SiTypescript size={48} />
 					<SiPhp size={48} />
 					<SiMysql size={48} />
-					<SiPostgresql size={48} />
 				</div>
 			</div>
 			<div className="w-2/3 space-y-6" id="category-wrapper">

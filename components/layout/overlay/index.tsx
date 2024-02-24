@@ -5,6 +5,7 @@ import Link from "next/link";
 export default function Layout() {
 	return (
 		<>
+			{/* <div className="fixed bottom-0 left-0">working_on_responsive</div> */}
 			<div className="fixed z-50 hidden lg:flex flex-col items-center w-16 p-4 space-y-4 left-0 inset-y-0">
 				<div className="h-[35%] w-px bg-gradient-to-t from-zinc-700 to-zinc-200/40 rounded-full"></div>
 				<div className="h-[30%] flex items-center">
